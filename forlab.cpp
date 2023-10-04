@@ -20,7 +20,6 @@ bool get_user_input_type() {
 	}
 }
 int main() {
-	setlocale(LC_ALL, "rus");
 	const int n = 10;
 	int new_array[n];
 	bool input_type = get_user_input_type();
