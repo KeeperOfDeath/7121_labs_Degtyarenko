@@ -5,7 +5,7 @@ int get_random_number(int min, int max) {
 	return number;
 }
 bool get_user_input_type() {
-	std::cout << "Choose the type of input: 1-automatically, 2-manually ";
+	std::cout << "Choose the type of input: 1-automatically, 2-manually: ";
 	int input_type;
 	std::cin >> input_type;
 	switch (input_type) {
@@ -25,11 +25,11 @@ int main() {
 	int new_array[n];
 	bool input_type = get_user_input_type();
 	if (input_type==true) {
-		std::cout << "\nВведите границы для поиска рандомных чисел: ";
+		std::cout << "\nEnter the boundaries for finding random numbers: ";
 		int left, right;
 		std::cin >> left >> right;
 		if (right < left) {
-			std::cout << "\nВведите правильную последовательность границ";
+			std::cout << "\nEnter the correct sequence of boundaries";
 			return 1;
 		}
 		for (int i = 0; i < n; ++i) {
@@ -47,7 +47,7 @@ int main() {
 			}
 		}
 	}
-	std::cout << "\nСумма элементов массива с нечетными номерами: ";
+	std::cout << "\nThe sum of the elements of the array with odd numbers: ";
 	int sum_of_elements = 0,i=1;
 	for (; i < n;) {
 		sum_of_elements += new_array[i];
@@ -65,7 +65,7 @@ int main() {
 		}
 	}
 	if (first_positive == -1 || last_positive == -1) {
-		std::cout << "\nОтсутствуют необходимые положительные значения";
+		std::cout << "\nThe necessary positive values are missing";
 		return 1;
 	}
 	int umn = 1;
@@ -82,6 +82,6 @@ int main() {
 	if (umn < 0) {
 		umn *= -1;
 	}
-	std::cout << "\nПроизведение: " << umn;
+	std::cout << "\nThe result of multiplication: " << umn;
 	return 0;
 }
